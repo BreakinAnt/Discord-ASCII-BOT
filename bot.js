@@ -178,8 +178,8 @@ function asciiSelect(id, channelID){
 function asciiSelectRandom (channelID){
     con.query("SELECT * FROM pOwQ5cpo4x.tb_ascii", function (err, result) {
         if (err) throw err;
-        var idRandom = Math.random()* result.length;
-        idRandom = parseInt(idRandom, 10);
+        var idRandom = Math.random() * result.length;
+        idRandom = parseInt(idRandom ++, 10);
         
         bot.sendMessage({
 
